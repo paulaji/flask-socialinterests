@@ -6,17 +6,13 @@ app = Flask(__name__)
 @app.route('/')
 def fetch_facebook_info():
     # Replace 'YOUR_ACCESS_TOKEN' with your actual Facebook access token
-    access_token = {"FACEBOOK_ACCESS_TOKEN"}
-
-    # Initialize the Facebook Graph API object
+    access_token = {"TOKEN"}
     graph = facebook.GraphAPI(access_token)
 
     try:
-        # Retrieve the user's profile
         fields = ['name,email,birthday,gender,hometown,inspirational_people,location,quotes,posts']
         profile = graph.get_object('me', fields=fields)
 
-        # Extract individual field values
         name_value = profile.get('name')
         email_value = profile.get('email')
         birthday_value = profile.get('birthday')
@@ -27,7 +23,6 @@ def fetch_facebook_info():
         quotes_value = profile.get('quotes')
         posts_value = profile.get('posts')
 
-        # Pass all field values as context
         context = {
             'name': name_value,
             'email': email_value,
@@ -42,7 +37,6 @@ def fetch_facebook_info():
 
         return render_template('facebook_info.html', **context)
     except facebook.GraphAPIError as e:
-        # Handle any errors that may occur during the API request
         error_message = str(e)
         return render_template('error.html', error=error_message)
 
