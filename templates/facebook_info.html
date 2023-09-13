@@ -1,7 +1,26 @@
-<!DOCTYPE html>
+<!-- with id -->
+<!-- <!DOCTYPE html>
 <html>
   <head>
     <title>Facebook Profile Info</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h1 {
+        color: #333;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+      strong {
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
     <h1>Facebook Profile Info</h1>
@@ -15,6 +34,64 @@
       <li><strong>Location:</strong> {{ location }}</li>
       <li><strong>Quotes:</strong> {{ quotes }}</li>
       <li><strong>Posts:</strong> {{ posts }}</li>
+    </ul>
+  </body>
+</html> -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!-- without id -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Facebook Profile Info</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h1 {
+        color: #333;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+      strong {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Facebook Profile Info</h1>
+    <ul>
+      <li><strong>Name:</strong> {{ name }}</li>
+      <li><strong>Email:</strong> {{ email }}</li>
+      <li><strong>Birthday:</strong> {{ birthday }}</li>
+      <li><strong>Gender:</strong> {{ gender }}</li>
+      <li><strong>Hometown:</strong> {{ hometown.name }}</li>
+      <li>
+        <strong>Inspirational People:</strong>
+        <ul>
+          {% for person in ip %}
+          <li>{{ person.name }}</li>
+          {% endfor %}
+        </ul>
+      </li>
+      <li><strong>Location:</strong> {{ location.name }}</li>
+      <li><strong>Quotes:</strong> {{ quotes }}</li>
+      <li>
+        <strong>Posts:</strong>
+        <ul>
+          {% for post in posts.data %}
+          <li>{{ post.message }}</li>
+          {% endfor %}
+        </ul>
+      </li>
     </ul>
   </body>
 </html>
