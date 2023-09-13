@@ -44,7 +44,7 @@ def fetch_facebook_info():
     except facebook.GraphAPIError as e:
         # Handle any errors that may occur during the API request
         error_message = str(e)
-        return render_template('facebook_error.html', error=error_message)
+        return render_template('error.html', error=error_message)
 
 if __name__ == "__main__":
     app.run(debug=True)
