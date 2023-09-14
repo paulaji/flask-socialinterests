@@ -8,7 +8,7 @@ Project snippets/images are available in the photos folder in the root directory
 
 The "socialinterests-socialapi" project is designed to help users explore and understand social media profiles and interests using Facebook, Instagram, and LinkedIn APIs. It leverages external libraries and services such as Facebook Graph API, Instagram Basic Display API, and ProxyCurl to gather user profile information and interests.
 
-![Project Image](./photos/1homepage.png)
+![Project Homepage](./photos/1homepage.png)
 
 ## Features
 
