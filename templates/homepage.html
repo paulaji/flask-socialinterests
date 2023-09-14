@@ -1,9 +1,22 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Social Media API</title>
+  </head>
+  <body>
+    <h1>Now we will explore User interests/detials via Social Media</h1>
+    <button><a href="./facebook">Facebook API</a></button>
+    <button><a href="./instagram">Instagram API</a></button>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Media Interests via API</title>
     <style>
       /* Reset default margin and padding for all elements */
       * {
@@ -23,17 +36,17 @@
       /* Style the heading */
       h1 {
         color: #333;
-        font-size: 24px;
+        font-size: 28px; /* Slightly larger font size */
         margin-bottom: 20px;
       }
 
       /* Style the buttons */
       button {
         display: inline-block;
-        padding: 12px 24px; /* Increased button size */
+        padding: 14px 28px; /* Slightly larger padding */
         border: none;
         border-radius: 5px;
-        font-size: 18px;
+        font-size: 20px; /* Slightly larger font size */
         margin-right: 10px;
         cursor: pointer;
         transition: background-color 0.3s;
@@ -51,6 +64,12 @@
         color: #fff;
       }
 
+      /* Style the LinkedIn button */
+      .linkedin-button {
+        background-color: #0077b5; /* LinkedIn blue color */
+        color: #fff;
+      }
+
       /* Style the button links */
       button a {
         color: #fff;
@@ -64,12 +83,15 @@
     </style>
   </head>
   <body>
-    <h1>Now we will explore User interests/details via Social Media</h1>
+    <h1>Now we will explore User interests/details via Social Media APIs</h1>
     <button class="facebook-button">
       <a href="./facebook">Facebook API</a>
     </button>
     <button class="instagram-button">
       <a href="./instagram">Instagram API</a>
+    </button>
+    <button class="linkedin-button">
+      <a href="./linkedin">LinkedIn API</a>
     </button>
   </body>
 </html>
