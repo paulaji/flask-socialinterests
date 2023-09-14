@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LinkedIn Profile Info</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h1 {
+        color: #333;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      li {
+        margin-bottom: 10px;
+      }
+      strong {
+        font-weight: bold;
+      }
+      .profile-pic {
+        max-width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>LinkedIn Profile Info</h1>
+    <img
+      class="profile-pic"
+      src="{{ linkedin_data.profile_pic_url }}"
+      alt="Profile Picture"
+    />
+    <ul>
+      <li><strong>Name:</strong> {{ linkedin_data.full_name }}</li>
+      <li>
+        <strong>Occupation (Previous/Latest):</strong> {{
+        linkedin_data.occupation }}
+      </li>
+      <li><strong>Headline:</strong> {{ linkedin_data.headline }}</li>
+      <li><strong>Summary:</strong> {{ linkedin_data.summary }}</li>
+      <li><strong>Country:</strong> {{ linkedin_data.country }}</li>
+      <li><strong>City:</strong> {{ linkedin_data.city }}</li>
+      <li>
+        <strong>Follower Count:</strong> {{ linkedin_data.follower_count }}
+      </li>
+      <!-- We can add more fields as needed -->
+    </ul>
+    <button><a href="./homepage.html">< Home</a></button>
+  </body>
+</html>
